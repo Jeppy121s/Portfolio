@@ -1,0 +1,36 @@
+.content{
+    margin: 50px 520px;
+    padding: 20px;
+
+}
+.navbar{
+background-color: crimson;
+    font-size: 25px;
+    font-weight: bolder;
+    padding-left: 100px;
+}
+.footer{
+
+    text-align: center;
+
+}
+.form-group{
+    padding-bottom: 10px;
+    border-width: 10px;
+    border-color: black;
+}
+.form{
+    display: flex;
+    gap: 5px;
+}
+
+.btn-primary{
+    background-color: crimson;
+}
+.card{
+    margin: 50px 75px;
+}
+.pagination{
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}Bookstore Home{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Bookstore</h1>
+<a href="{% url 'add_book' %}" style="display: inline-block; margin-bottom: 20px;">Add a New Book</a>
+<ul>
+    {% for book in books %}
+    <li>
+        <strong>{{ book.title }}</strong> by {{ book.author }}
+        ({{ book.year }}, Rating: {{ book.rating }}) -
+        <a href="{% url 'book_detail' book.id %}">View Details</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ibmcs\\Downloads\\MVC Web Application\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5281C22B-AF5F-4439-A254-8EBD2DE68814}|MVC Web Application.csproj|c:\\users\\ibmcs\\downloads\\mvc web application\\views\\departments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5281C22B-AF5F-4439-A254-8EBD2DE68814}|MVC Web Application.csproj|solutionrelative:views\\departments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5281C22B-AF5F-4439-A254-8EBD2DE68814}|MVC Web Application.csproj|C:\\Users\\ibmcs\\Downloads\\MVC Web Application\\views\\departments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5281C22B-AF5F-4439-A254-8EBD2DE68814}|MVC Web Application.csproj|solutionrelative:views\\departments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5281C22B-AF5F-4439-A254-8EBD2DE68814}|MVC Web Application.csproj|C:\\Users\\ibmcs\\Downloads\\MVC Web Application\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5281C22B-AF5F-4439-A254-8EBD2DE68814}|MVC Web Application.csproj|solutionrelative:views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5281C22B-AF5F-4439-A254-8EBD2DE68814}|MVC Web Application.csproj|C:\\Users\\ibmcs\\Downloads\\MVC Web Application\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5281C22B-AF5F-4439-A254-8EBD2DE68814}|MVC Web Application.csproj|solutionrelative:views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibmcs\\Downloads\\MVC Web Application\\Views\\Departments\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Departments\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ibmcs\\Downloads\\MVC Web Application\\Views\\Departments\\Details.cshtml",
+              "RelativeToolTip": "Views\\Departments\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-10T18:11:49.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibmcs\\Downloads\\MVC Web Application\\Views\\Departments\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Departments\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ibmcs\\Downloads\\MVC Web Application\\Views\\Departments\\Index.cshtml",
+              "RelativeToolTip": "Views\\Departments\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-10T18:11:39.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibmcs\\Downloads\\MVC Web Application\\Views\\Employees\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employees\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ibmcs\\Downloads\\MVC Web Application\\Views\\Employees\\Details.cshtml",
+              "RelativeToolTip": "Views\\Employees\\Details.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-10T18:11:17.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibmcs\\Downloads\\MVC Web Application\\Views\\Employees\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employees\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ibmcs\\Downloads\\MVC Web Application\\Views\\Employees\\Index.cshtml",
+              "RelativeToolTip": "Views\\Employees\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-10T18:10:43.733Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

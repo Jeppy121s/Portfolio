@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storefront</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Storefront</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- <section id="login">
+            <h2>Account</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username">
+            <button onclick="login()">Login</button>
+            <button onclick="logout()">Logout</button>
+        </section> -->
+        <section id="login">
+            <h2>Account</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+            <button onclick="login()">Login</button>
+            <button onclick="logout()">Logout</button>
+        </section>
+        
+        <section id="products">
+            <h2>Products</h2>
+            <div class="product alignment">
+                <img src="product1.jpg" alt="Product 1" width="250"  height="250">
+                <h3>Just Keep Moving on t-shirt</h3>
+                <p>$19.99</p>
+                <button onclick="addToCart('Just Keep Moving on t-shirt', 19.99)">Add to Cart</button>
+            </div>
+            <div class="product alignment">
+              <img src="product2.jpg" alt="Product 2" width="250"  height="250">
+              <h3>Waddle Dee T-shirt</h3>
+              <p>$19.99</p>
+              <button onclick="addToCart('Waddle Dee T-shirt', 19.99)">Add to Cart</button>
+          </div>
+          <div class="product alignment">
+            <img src="product3.jpg" alt="Product 3" width="250"  height="250">
+            <h3>One Piece Straw Hat Varsity Tank Top</h3>
+            <p>$19.99</p>
+            <button onclick="addToCart('One Piece Straw Hat Varsity Tank Top', 19.99)">Add to Cart</button>
+        </div>
+        </section>
+        <section id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="cart-total">Total: $0.00</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Karamjit Judge.</p>
+    </footer>
+    <script>
+        let currentUser = null;
+        const cartList = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+    
+        function login() {
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value.trim();
+            
+            if (username && password) {
+                const storedUserData = JSON.parse(localStorage.getItem(username));
+                
+                if (storedUserData) {
+                    if (storedUserData.password === password) {
+                        currentUser = username;
+                        loadCart();
+                        alert(`Logged in as ${username}`);
+                    } else {
+                        alert('Incorrect password.');
+                    }
+                } else {
+                    const newUser = { password: password, cart: [] };
+                    localStorage.setItem(username, JSON.stringify(newUser));
+                    currentUser = username;
+                    alert(`New account created and logged in as ${username}`);
+                }
+            } else {
+                alert('Please enter both username and password.');
+            }
+        }
+    
+        function logout() {
+            saveCart();
+            currentUser = null;
+            cartList.innerHTML = '';
+            cartTotal.textContent = 'Total: $0.00';
+            alert('Logged out.');
+        }
+    
+        function addToCart(itemName, itemPrice) {
+            if (!currentUser) {
+                alert('Please log in first.');
+                return;
+            }
+    
+            // Add item to cart
+            const userData = JSON.parse(localStorage.getItem(currentUser));
+            userData.cart.push({ name: itemName, price: itemPrice });
+            localStorage.setItem(currentUser, JSON.stringify(userData));
+    
+            // Update cart display
+            updateCart(userData.cart);
+        }
+    
+        function loadCart() {
+            if (currentUser) {
+                const userData = JSON.parse(localStorage.getItem(currentUser));
+                updateCart(userData.cart);
+            }
+        }
+    
+        function saveCart() {
+            if (currentUser) {
+                const cartItems = JSON.parse(localStorage.getItem(currentUser)).cart;
+                const userData = JSON.parse(localStorage.getItem(currentUser));
+                userData.cart = cartItems;
+                localStorage.setItem(currentUser, JSON.stringify(userData));
+            }
+        }
+    
+        function updateCart(cartItems) {
+            cartList.innerHTML = '';
+    
+            // Calculate total price
+            let total = 0;
+            cartItems.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartList.appendChild(listItem);
+                total += item.price;
+            });
+    
+            // Update total display
+            cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+        }
+    </script>
+    
+<!-- 
+    <script>
+        let currentUser = null;
+        const cartList = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+
+        function login() {
+            const usernameInput = document.getElementById('username');
+            currentUser = usernameInput.value.trim();
+            if (currentUser) {
+                loadCart();
+                alert(`Logged in as ${currentUser}`);
+            } else {
+                alert('Please enter a username.');
+            }
+        }
+
+        function logout() {
+            saveCart();
+            currentUser = null;
+            cartList.innerHTML = '';
+            cartTotal.textContent = 'Total: $0.00';
+            alert('Logged out.');
+        }
+
+        function addToCart(itemName, itemPrice) {
+            if (!currentUser) {
+                alert('Please log in first.');
+                return;
+            }
+
+            // Add item to cart
+            let cartItems = JSON.parse(localStorage.getItem(currentUser)) || [];
+            cartItems.push({ name: itemName, price: itemPrice });
+            localStorage.setItem(currentUser, JSON.stringify(cartItems));
+
+            // Update cart display
+            updateCart(cartItems);
+        }
+
+        function loadCart() {
+            if (currentUser) {
+                const cartItems = JSON.parse(localStorage.getItem(currentUser)) || [];
+                updateCart(cartItems);
+            }
+        }
+
+        function saveCart() {
+            if (currentUser) {
+                const cartItems = JSON.parse(localStorage.getItem(currentUser)) || [];
+                localStorage.setItem(currentUser, JSON.stringify(cartItems));
+            }
+        }
+
+        function updateCart(cartItems) {
+            cartList.innerHTML = '';
+
+            // Calculate total price
+            let total = 0;
+            cartItems.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartList.appendChild(listItem);
+                total += item.price;
+            });
+
+            // Update total display
+            cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+        }
+    </script> -->
+</body>
+</html>

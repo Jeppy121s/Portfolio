@@ -1,0 +1,21 @@
+.content{
+    margin: 50px 550px;
+    padding: 20px;
+}
+.navbar{
+background-color: crimson;
+    font-size: 25px;
+    font-weight: bolder;
+    padding-left: 100px;
+}
+.footer{
+
+    text-align: center;
+
+}
+.form-group{
+    padding-bottom: 10px;
+}
+.btn-primary{
+    background-color: crimson;
+}

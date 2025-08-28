@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="main">
+    <header th:include="@{/fragments/header.html}"></header>
+
+    <div class="content">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Welcome to <span th:text="${libraryName}"></span></h5>
+                <h6 class="card-subtitle mb-2 text-muted">Karamjit Judge Assignment thing N01477742</h6>
+                <p class="card-text">Welcome to our library! We hope you find what you're looking for.</p>
+            </div>
+    </div>
+    </div>
+    <footer th:include="@{/fragments/footer.html}"></footer>
+
+</div>
+</body>
+</html>

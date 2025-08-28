@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>shipping calculator</title>
+  </head>
+  <body>
+    <p>Shipping calculator</p>
+
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="console.log('typing')"; />
+    <button onclick="calculateTotal();
+    console.log(cost);
+    console.log(typeof cost);
+    ">calculate</button>
+    <p class="js-cost-total"></p>
+
+
+    <button class="js-subscribe" onclick="
+    subscribe();
+    ">Subscribe</button>
+
+    <script>
+
+        function calculateTotal(){
+            const inputElement=document.querySelector('.js-cost-input');
+            const cost =Number(inputElement.value);
+            if(cost<40){
+                cost=cost+10;
+            }
+
+            document.querySelector('.js-cost-total')
+            .innerHTML =`$${cost}` ;
+
+        }
+
+
+      function subscribe(){
+        const buttonThing=document.querySelector('.js-subscribe');
+
+    if(buttonThing.innerText ==='Subscribe'){
+      buttonThing.innerHTML='Subscribed';
+    }
+    else{
+     buttonThing.innerHTML='Subscribe';
+    }
+      }
+  
+     
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite Games</title>
+</head>
+<body>
+<h1>Favorite Games</h1>
+
+<ul>
+    <div class="content">
+        <li th:each="game : ${favorites}">
+            <h2 th:text="${game.name}"></h2>
+            <p th:text="'Released: ' + ${game.released}"></p>
+            <p th:text="'Rating: ' + ${game.rating}"></p>
+            <img th:src="${game.backgroundImage}" alt="Game Image" />
+        </li>
+    </div>
+</ul>
+
+</body>
+</html>
